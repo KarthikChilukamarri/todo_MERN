@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1>ToDo List App</h1>
+    <form action="/submit" method="POST">
+        <label for="task">Task todo:</label><br>
+        <input type="text" id="task" name="task"><br> 
+        <p><%= locals.err %></p>
+        <input type="submit" value="Submit">    
+    </form>
+    <div class="container">
+        <div class="header">
+            <h3>Task</h3>
+            <h3>Status</h3>
+        </div>
+        <div class="data">
+            <% if (locals.todo) { %>
+                <% for (const task of todo) { %>
+                    <p><%= task %></p>
+                    <a href="<%= '/completed/'+task %>">Completed</a>
+                <% } %>
+            <% } %>
+        </div>
+    </div>    
+</body>
+</html>

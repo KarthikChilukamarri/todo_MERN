@@ -1,0 +1,19 @@
+h1 {
+    color: red;
+}
+
+p {
+    color: red;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
